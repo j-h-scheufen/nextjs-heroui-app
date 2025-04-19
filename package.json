@@ -1,11 +1,11 @@
 {
-  "name": "regen-link",
+  "name": "nextjs-monorepo-template",
   "version": "0.1.0",
   "private": true,
-  "description": "Regen Link Monorepo",
+  "description": "NextJS Monorepo Template",
   "license": "MIT",
   "scripts": {
-    "dev:app": "pnpm --filter regen-link dev",
+    "dev:app": "pnpm --filter my-app dev",
     "dev": "pnpm -r dev",
     "lint": "pnpm -r lint",
     "build": "pnpm -r build",

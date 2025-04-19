@@ -34,7 +34,7 @@ export default async function Home({ params: { locale } }: NextPageProps) {
         </CardBody>
       </Card>
 
-      <p className="mt-8 text-sm text-neutral-500">© 2025 Regen Link. All rights reserved.</p>
+      <p className="mt-8 text-sm text-neutral-500">© 2025 Acme Corp. All rights reserved.</p>
     </main>
   );
 }

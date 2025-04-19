@@ -1,11 +1,7 @@
-// apps/regen-link/config/environment.ts
-
 type ConfigType = {
   appUrl: string;
   nextAuthSecret?: string;
 };
-
-const isServer = typeof window === 'undefined';
 
 export const getBaseUrl = () => {
   let baseUrl = undefined;
@@ -19,10 +15,10 @@ export const getBaseUrl = () => {
 };
 
 const ENV: ConfigType = {
-  appUrl: required(process.env.NEXT_PUBLIC_APP_URL, 'NEXT_PUBLIC_APP_URL'),
-  nextAuthSecret: isServer ? required(process.env.NEXTAUTH_SECRET, 'NEXTAUTH_SECRET') : undefined,
+  appUrl: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
 };
 
+// biome-ignore lint/correctness/noUnusedVariables: no build-time required env vars, yet
 function required(value: string | undefined, name: string): string {
   if (!value) {
     throw new Error(`Missing required environment variable ${name}`);
